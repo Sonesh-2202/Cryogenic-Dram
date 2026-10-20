@@ -162,31 +162,31 @@
   "spice_simulations": {
     "1T_1C": {
       "num_data_points": 1655,
-      "v_store_max_V": 4.0518,
+      "v_store_max_V": 4.0517,
       "v_store_min_V": 0.0,
-      "threshold_loss_V": 0.9482,
+      "threshold_loss_V": 0.9483,
       "assumptions": {
         "vdd_V": 5.0,
         "storage_cap_pF": 1.0,
         "leakage_current_pA": 1.0
       },
-      "analytical_charge_pC": 4.0518,
+      "analytical_charge_pC": 4.0517,
       "analytical_write_energy_pJ": 25.0,
-      "analytical_retention_ms": 2025.88
+      "analytical_retention_ms": 2025.86
     },
     "3T": {
       "num_data_points": 1701,
-      "v_store_max_V": 4.0996,
-      "bitline_swing_V": 4.8202,
+      "v_store_max_V": 4.0699,
+      "bitline_swing_V": 4.8194,
       "read_type": "non-destructive",
       "assumptions": {
         "vdd_V": 5.0,
         "storage_cap_fF": 2.0,
         "leakage_current_pA": 1.0
       },
-      "analytical_charge_fC": 8.1992,
+      "analytical_charge_fC": 8.1397,
       "analytical_write_energy_fJ": 50.0,
-      "analytical_retention_us": 4099.6
+      "analytical_retention_us": 4069.87
     }
   },
   "comparison_records": [
