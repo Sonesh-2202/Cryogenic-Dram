@@ -1,0 +1,241 @@
+arbiter.o: arbiter.cc arbiter.h component.h area.h power_def.h \
+ power_components.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h input_parameter.h \
+ enum/wire_type.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h wire.h global_cacti_input.h \
+ cacti_interface.pb.h const.h enum/wire_placement.h
+bank.o: bank.cc bank.h component.h area.h power_def.h power_components.h \
+ mat.h subarray.h basic_circuit.h enum/half_net_topology.h \
+ enum/gate_type.h input_parameter.h enum/wire_type.h enum/mem_state.h \
+ enum/mem_ecc.h enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h dynamic_parameter.h htree2.h technology_parameter.h \
+ device_type.h interconnect_type.h scaling_factor.h memory_type.h \
+ enum/htree_type.h driver.h const.h sleep_tx.h
+basic_circuit.o: basic_circuit.cc const.h basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h technology_parameter.h \
+ device_type.h interconnect_type.h scaling_factor.h memory_type.h
+bob_conf.o: bob_conf.cc bob_conf.h mem_cad_parameters.h \
+ enum/mem_io_type.h enum/mem_cad_metrics.h enum/dimm_model.h \
+ channel_conf.h enum/mem_dimm.h
+cacti_interface.o: cacti_interface.cc cacti_interface.h uca_org_t.h \
+ power_def.h power_components.h results_mem_array.h global_cacti_input.h \
+ cacti_interface.pb.h input_parameter.h enum/wire_type.h enum/mem_state.h \
+ enum/mem_ecc.h enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h wire.h component.h \
+ area.h const.h enum/wire_placement.h io.h nuca.h tsv.h enum/tsv_type.h \
+ io_tech_param.h extio.h mem_cad_parameters.h mem_cad.h
+calculate_time.o: calculate_time.cc calculate_time.h results_mem_array.h \
+ power_def.h power_components.h enum/wire_type.h mem_array.h \
+ basic_circuit.h enum/half_net_topology.h enum/gate_type.h const.h \
+ input_parameter.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h min_values_t.h \
+ dynamic_parameter.h area.h uca.h component.h bank.h mat.h subarray.h \
+ htree2.h technology_parameter.h device_type.h interconnect_type.h \
+ scaling_factor.h memory_type.h enum/htree_type.h predec.h decoder.h \
+ sleep_tx.h memorybus.h enum/memorybus_type.h
+channel_conf.o: channel_conf.cc channel_conf.h enum/mem_dimm.h \
+ mem_cad_parameters.h enum/mem_io_type.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h memory_parameters.h
+component.o: component.cc component.h area.h power_def.h \
+ power_components.h input_parameter.h enum/wire_type.h enum/mem_state.h \
+ enum/mem_ecc.h enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h const.h \
+ basic_circuit.h enum/half_net_topology.h enum/gate_type.h
+crossbar.o: crossbar.cc crossbar.h component.h area.h power_def.h \
+ power_components.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h const.h wire.h \
+ global_cacti_input.h cacti_interface.pb.h enum/wire_type.h \
+ enum/wire_placement.h input_parameter.h enum/mem_state.h enum/mem_ecc.h \
+ enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h basic_circuit.h enum/half_net_topology.h \
+ enum/gate_type.h
+decoder.o: decoder.cc decoder.h component.h area.h power_def.h \
+ power_components.h const.h sleep_tx.h basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h input_parameter.h \
+ enum/wire_type.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h \
+ technology_parameter.h device_type.h interconnect_type.h \
+ scaling_factor.h memory_type.h
+device_type.o: device_type.cc device_type.h cacti_interface.pb.h io.h \
+ input_parameter.h enum/wire_type.h enum/mem_state.h enum/mem_ecc.h \
+ enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h technology_parameter.h interconnect_type.h \
+ scaling_factor.h memory_type.h basic_circuit.h enum/half_net_topology.h \
+ enum/gate_type.h
+driver.o: driver.cc driver.h component.h area.h power_def.h \
+ power_components.h const.h sleep_tx.h basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h input_parameter.h \
+ enum/wire_type.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h \
+ technology_parameter.h device_type.h interconnect_type.h \
+ scaling_factor.h memory_type.h
+dynamic_parameter.o: dynamic_parameter.cc dynamic_parameter.h \
+ enum/wire_type.h area.h basic_circuit.h enum/half_net_topology.h \
+ enum/gate_type.h const.h input_parameter.h enum/mem_state.h \
+ enum/mem_ecc.h enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h \
+ enum/ram_cell_tech_type_num.h
+extio.o: extio.cc extio.h component.h area.h power_def.h \
+ power_components.h io_tech_param.h enum/mem_io_type.h input_parameter.h \
+ enum/wire_type.h enum/mem_state.h enum/mem_ecc.h enum/mem_dimm.h \
+ enum/mem_cad_metrics.h enum/dimm_model.h
+htree2.o: htree2.cc htree2.h component.h area.h power_def.h \
+ power_components.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h enum/htree_type.h \
+ enum/wire_type.h wire.h global_cacti_input.h cacti_interface.pb.h \
+ const.h enum/wire_placement.h basic_circuit.h enum/half_net_topology.h \
+ enum/gate_type.h
+input_parameter.o: input_parameter.cc input_parameter.h enum/wire_type.h \
+ enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h enum/mem_dimm.h \
+ enum/mem_cad_metrics.h enum/dimm_model.h basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h enum/ram_cell_tech_type_num.h
+interconnect_type.o: interconnect_type.cc interconnect_type.h \
+ cacti_interface.pb.h input_parameter.h enum/wire_type.h enum/mem_state.h \
+ enum/mem_ecc.h enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h io.h wire.h component.h area.h power_def.h \
+ power_components.h technology_parameter.h device_type.h scaling_factor.h \
+ memory_type.h global_cacti_input.h const.h enum/wire_placement.h \
+ basic_circuit.h enum/half_net_topology.h enum/gate_type.h
+io.o: io.cc io.h version_cacti.h const.h input_parameter.h \
+ enum/wire_type.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h \
+ dynamic_parameter.h area.h global_cacti_input.h cacti_interface.pb.h \
+ uca_org_t.h power_def.h power_components.h results_mem_array.h \
+ mem_array.h wire.h component.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h enum/wire_placement.h
+io_tech_param.o: io_tech_param.cc io_tech_param.h enum/mem_io_type.h \
+ const.h input_parameter.h enum/wire_type.h enum/mem_state.h \
+ enum/mem_ecc.h enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h
+main.o: main.cc global_cacti_input.h cacti_interface.pb.h \
+ cacti_interface.h uca_org_t.h power_def.h power_components.h \
+ results_mem_array.h
+mat.o: mat.cc mat.h component.h area.h power_def.h power_components.h \
+ subarray.h input_parameter.h enum/wire_type.h enum/mem_state.h \
+ enum/mem_ecc.h enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h dynamic_parameter.h technology_parameter.h \
+ device_type.h interconnect_type.h scaling_factor.h memory_type.h \
+ basic_circuit.h enum/half_net_topology.h enum/gate_type.h decoder.h \
+ const.h sleep_tx.h predec_blk.h predec_blk_drv.h predec.h driver.h \
+ wire.h global_cacti_input.h cacti_interface.pb.h enum/wire_placement.h
+mem_array.o: mem_array.cc mem_array.h power_def.h power_components.h \
+ enum/wire_type.h
+mem_cad.o: mem_cad.cc mem_cad.h const.h mem_cad_parameters.h \
+ enum/mem_io_type.h enum/mem_cad_metrics.h enum/dimm_model.h \
+ memory_parameters.h channel_conf.h enum/mem_dimm.h memory_conf.h \
+ bob_conf.h
+mem_cad_parameters.o: mem_cad_parameters.cc mem_cad_parameters.h \
+ enum/mem_io_type.h enum/mem_cad_metrics.h enum/dimm_model.h \
+ input_parameter.h enum/wire_type.h enum/mem_state.h enum/mem_ecc.h \
+ enum/mem_dimm.h
+memorybus.o: memorybus.cc memorybus.h component.h area.h power_def.h \
+ power_components.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h enum/memorybus_type.h \
+ enum/wire_type.h basic_circuit.h enum/half_net_topology.h \
+ enum/gate_type.h input_parameter.h enum/mem_state.h enum/mem_ecc.h \
+ enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h dynamic_parameter.h wire.h global_cacti_input.h \
+ cacti_interface.pb.h const.h enum/wire_placement.h decoder.h sleep_tx.h \
+ predec.h predec_blk.h predec_blk_drv.h driver.h
+memory_conf.o: memory_conf.cc memory_conf.h mem_cad_parameters.h \
+ enum/mem_io_type.h enum/mem_cad_metrics.h enum/dimm_model.h bob_conf.h
+memory_parameters.o: memory_parameters.cc memory_parameters.h \
+ enum/mem_io_type.h const.h
+memory_type.o: memory_type.cc memory_type.h io.h input_parameter.h \
+ enum/wire_type.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h
+min_values_t.o: min_values_t.cc min_values_t.h const.h uca_org_t.h \
+ power_def.h power_components.h results_mem_array.h nuca_org_t.h \
+ component.h area.h mem_array.h enum/wire_type.h
+nuca.o: nuca.cc nuca.h component.h area.h power_def.h power_components.h \
+ const.h nuca_org_t.h router.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h enum/wire_type.h \
+ enum/wire_placement.h basic_circuit.h enum/half_net_topology.h \
+ enum/gate_type.h input_parameter.h enum/mem_state.h enum/mem_ecc.h \
+ enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h dynamic_parameter.h wire.h global_cacti_input.h \
+ cacti_interface.pb.h mem_array.h uca_org_t.h results_mem_array.h \
+ min_values_t.h
+nuca_org_t.o: nuca_org_t.cc nuca_org_t.h component.h area.h power_def.h \
+ power_components.h
+power_def.o: power_def.cc power_def.h power_components.h
+power_components.o: power_components.cc power_components.h
+predec_blk.o: predec_blk.cc predec_blk.h component.h area.h power_def.h \
+ power_components.h const.h decoder.h sleep_tx.h basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h technology_parameter.h \
+ device_type.h interconnect_type.h scaling_factor.h memory_type.h
+predec_blk_drv.o: predec_blk_drv.cc predec_blk_drv.h component.h area.h \
+ power_def.h power_components.h const.h predec_blk.h decoder.h sleep_tx.h \
+ basic_circuit.h enum/half_net_topology.h enum/gate_type.h \
+ technology_parameter.h device_type.h interconnect_type.h \
+ scaling_factor.h memory_type.h
+predec.o: predec.cc predec.h component.h area.h power_def.h \
+ power_components.h predec_blk.h const.h predec_blk_drv.h
+router.o: router.cc router.h component.h area.h power_def.h \
+ power_components.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h enum/wire_type.h \
+ enum/wire_placement.h input_parameter.h enum/mem_state.h enum/mem_ecc.h \
+ enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h dynamic_parameter.h wire.h global_cacti_input.h \
+ cacti_interface.pb.h const.h basic_circuit.h enum/half_net_topology.h \
+ enum/gate_type.h crossbar.h mat.h subarray.h arbiter.h
+scaling_factor.o: scaling_factor.cc scaling_factor.h basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h input_parameter.h \
+ enum/wire_type.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h io.h
+sleep_tx.o: sleep_tx.cc sleep_tx.h component.h area.h power_def.h \
+ power_components.h basic_circuit.h enum/half_net_topology.h \
+ enum/gate_type.h input_parameter.h enum/wire_type.h enum/mem_state.h \
+ enum/mem_ecc.h enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h technology_parameter.h device_type.h \
+ interconnect_type.h scaling_factor.h memory_type.h const.h
+subarray.o: subarray.cc subarray.h component.h area.h power_def.h \
+ power_components.h const.h basic_circuit.h enum/half_net_topology.h \
+ enum/gate_type.h input_parameter.h enum/wire_type.h enum/mem_state.h \
+ enum/mem_ecc.h enum/mem_io_type.h enum/mem_dimm.h enum/mem_cad_metrics.h \
+ enum/dimm_model.h dynamic_parameter.h technology_parameter.h \
+ device_type.h interconnect_type.h scaling_factor.h memory_type.h \
+ enum/ram_cell_tech_type_num.h
+technology_parameter.o: technology_parameter.cc basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h input_parameter.h \
+ enum/wire_type.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h \
+ technology_parameter.h device_type.h interconnect_type.h \
+ scaling_factor.h memory_type.h global_cacti_input.h cacti_interface.pb.h \
+ io.h tsv.h component.h area.h power_def.h power_components.h const.h \
+ enum/tsv_type.h enum/ram_cell_tech_type_num.h
+tsv.o: tsv.cc tsv.h component.h area.h power_def.h power_components.h \
+ technology_parameter.h device_type.h interconnect_type.h \
+ scaling_factor.h memory_type.h const.h enum/tsv_type.h basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h input_parameter.h \
+ enum/wire_type.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h
+uca.o: uca.cc uca.h component.h area.h power_def.h power_components.h \
+ dynamic_parameter.h enum/wire_type.h bank.h mat.h subarray.h \
+ basic_circuit.h enum/half_net_topology.h enum/gate_type.h \
+ input_parameter.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h htree2.h \
+ technology_parameter.h device_type.h interconnect_type.h \
+ scaling_factor.h memory_type.h enum/htree_type.h memorybus.h \
+ enum/memorybus_type.h tsv.h const.h enum/tsv_type.h wire.h \
+ global_cacti_input.h cacti_interface.pb.h enum/wire_placement.h predec.h \
+ decoder.h sleep_tx.h driver.h
+uca_org_t.o: uca_org_t.cc uca_org_t.h power_def.h power_components.h \
+ results_mem_array.h min_values_t.h const.h mem_array.h enum/wire_type.h \
+ input_parameter.h enum/mem_state.h enum/mem_ecc.h enum/mem_io_type.h \
+ enum/mem_dimm.h enum/mem_cad_metrics.h enum/dimm_model.h \
+ technology_parameter.h device_type.h interconnect_type.h \
+ scaling_factor.h memory_type.h calculate_time.h dynamic_parameter.h \
+ area.h uca.h component.h bank.h mat.h subarray.h
+wire.o: wire.cc wire.h component.h area.h power_def.h power_components.h \
+ technology_parameter.h device_type.h interconnect_type.h \
+ scaling_factor.h memory_type.h global_cacti_input.h cacti_interface.pb.h \
+ const.h enum/wire_type.h enum/wire_placement.h basic_circuit.h \
+ enum/half_net_topology.h enum/gate_type.h
+cacti_interface.pb.o: cacti_interface.pb.cc cacti_interface.pb.h
+global_cacti_input.o: global_cacti_input.cc global_cacti_input.h \
+ cacti_interface.pb.h

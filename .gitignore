@@ -1,0 +1,27 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Lock files and backups
+*.lock
+*.bak
+*.backup
+
+# EDA & Simulation artifacts
+*.raw
+*.vcd
+*.out
+*.swp
+*.log
+!results/*.log
+
+# OS generated files
+Thumbs.db
+.DS_Store

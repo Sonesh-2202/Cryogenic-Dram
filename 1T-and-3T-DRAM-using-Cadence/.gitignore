@@ -1,0 +1,6 @@
+# build / simulation artifacts
+*.out
+*.vcd
+*.raw
+__pycache__/
+*.pyc
