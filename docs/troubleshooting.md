@@ -4,7 +4,38 @@ This document catalogs known issues, error signatures, and exact solutions encou
 
 ---
 
-## 1. Missing System Dependencies / Tools
+## 1. Windows 11 & WSL 2 Setup Issues
+
+### Issue: `Wsl/Service/CreateInstance/CreateVm/0x80370102`
+- **Error message**: `Please enable the Virtual Machine Platform Windows feature and ensure virtualization is enabled in the BIOS.`
+- **Cause**: CPU hardware virtualization (Intel VT-x or AMD-V/SVM) is disabled in motherboard firmware, or the Windows Virtual Machine Platform feature is disabled.
+- **Solution**:
+  1. Restart your PC, press `Del` or `F2` to enter BIOS/UEFI.
+  2. Locate **CPU Configuration** or **Advanced Settings** and set:
+     - Intel: **Intel Virtualization Technology (VT-x)** $\to$ `Enabled`
+     - AMD: **SVM Mode / AMD-V** $\to$ `Enabled`
+  3. Save and reboot into Windows.
+  4. Open PowerShell as Administrator and run:
+     ```powershell
+     dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+     wsl --update
+     ```
+
+### Issue: `wsl --install` fails or says command syntax is invalid
+- **Cause**: Windows 11 build is not up to date.
+- **Solution**:
+  Run in Administrator PowerShell:
+  ```powershell
+  dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+  dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+  wsl --update
+  wsl --set-default-version 2
+  wsl --install -d Ubuntu-22.04
+  ```
+
+---
+
+## 2. Missing System Dependencies / Tools
 
 ### Issue: `ngspice: command not found`
 - **Cause**: ngspice is not installed on the Linux system / WSL environment.
@@ -22,7 +53,7 @@ This document catalogs known issues, error signatures, and exact solutions encou
 
 ---
 
-## 2. Python & Protobuf Version Mismatch
+## 3. Python & Protobuf Version Mismatch
 
 ### Issue: `TypeError: Descriptors cannot not be created directly`
 - **Cause**: CryoModel uses Protocol Buffers files generated with an older `protoc` compiler. Modern `protobuf>=4.x` rejects these descriptors.
@@ -45,7 +76,7 @@ This document catalogs known issues, error signatures, and exact solutions encou
 
 ---
 
-## 3. CACTI Build Failures
+## 4. CACTI Build Failures
 
 ### Issue: `/opt/gcc-9.2/bin/g++-9.2: No such file or directory`
 - **Cause**: The original CACTI Makefile referenced a custom hardcoded compiler path.
@@ -63,7 +94,7 @@ This document catalogs known issues, error signatures, and exact solutions encou
 
 ---
 
-## 4. SPICE Simulation Issues
+## 5. SPICE Simulation Issues
 
 ### Issue: `ngspice -b` returns exit code 1 despite simulation completing
 - **Cause**: ngspice `.control` blocks without an explicit `quit 0` statement exit with code 1 in batch mode.
@@ -84,7 +115,7 @@ This document catalogs known issues, error signatures, and exact solutions encou
 
 ---
 
-## 5. File Permissions & Line Endings
+## 6. File Permissions & Line Endings
 
 ### Issue: `/bin/bash^M: bad interpreter: No such file or directory`
 - **Cause**: Windows CRLF line endings in shell scripts.
@@ -105,7 +136,7 @@ This document catalogs known issues, error signatures, and exact solutions encou
 
 ---
 
-## 6. Headless Linux / WSL Display Errors
+## 7. Headless Linux / WSL Display Errors
 
 ### Issue: `UserWarning: Matplotlib is currently using agg, which is a non-GUI backend`
 - **Explanation**: This is expected and intended. All CryoDRAM plotting scripts explicitly use `matplotlib.use("Agg")` so figures render cleanly in headless WSL and automated CI environments without requiring an X server or GUI display.

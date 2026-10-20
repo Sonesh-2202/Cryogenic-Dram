@@ -96,39 +96,87 @@ graph TD
 
 ## 5. Installation & Setup
 
-### Option A: Windows 11 with WSL 2 (Recommended for Teammates)
-1. Open PowerShell as Administrator and ensure WSL 2 is installed:
+### 5.1 Setting Up Windows 11 with WSL 2 and Ubuntu 22.04 (From Scratch)
+
+If you are on Windows 11 and do not have WSL 2 or Ubuntu installed yet, follow these step-by-step instructions:
+
+#### Step 1: Ensure Hardware Virtualization is Enabled
+1. Open **Task Manager** (`Ctrl + Shift + Esc`).
+2. Click the **Performance** tab and select **CPU**.
+3. Under the CPU graph, verify that **Virtualization: Enabled** is displayed.
+   *(If disabled, reboot your PC, enter your BIOS/UEFI settings, and enable **Intel Virtualization Technology (VT-x)** or **AMD-V / SVM Mode**).*
+
+#### Step 2: Install WSL 2 & Ubuntu 22.04
+1. Press `Win + X` on your keyboard and select **Terminal (Admin)** or **PowerShell (Administrator)**.
+2. Run the official WSL installation command:
    ```powershell
    wsl --install -d Ubuntu-22.04
    ```
-2. Launch Ubuntu 22.04:
+3. If WSL is already installed or you encounter feature errors, ensure the required Windows features and WSL 2 kernel are up to date:
    ```powershell
-   wsl -d Ubuntu-22.04
+   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+   wsl --update
+   wsl --set-default-version 2
    ```
-3. Inside the Ubuntu terminal, clone the repository and navigate to the project root:
+4. **Restart your computer** if prompted by Windows to finalize virtualization setup.
+
+#### Step 3: Initialize Ubuntu & Set Credentials
+1. After rebooting, open **Ubuntu 22.04** from the Windows Start menu (or type `wsl -d Ubuntu-22.04` in PowerShell).
+2. Wait a moment for the initial initialization to finish.
+3. When prompted, create a **UNIX username** and **password** (note: characters will not show on screen while typing passwords for security).
+4. Update the package database:
    ```bash
-   git clone https://github.com/Sonesh-2202/Cryogenic-Dram.git
-   cd Cryogenic-Dram
-   ```
-4. Run the automated setup script:
-   ```bash
-   bash scripts/setup.sh
-   ```
-5. Activate the virtual environment:
-   ```bash
-   source .venv/bin/activate
+   sudo apt-get update && sudo apt-get upgrade -y
    ```
 
-### Option B: Native Ubuntu 22.04 LTS
+#### Step 4: Access Your Project Files in WSL
+Windows drives are automatically accessible inside WSL under `/mnt/`:
+- Windows `C:\` drive is at `/mnt/c/`
+- Windows `E:\` drive is at `/mnt/e/`
+
+You can navigate directly to your Windows repository or clone fresh:
 ```bash
+# If your repository is located on your E: drive:
+cd /mnt/e/CryoDRAM
+
+# Or clone directly into your Linux user home directory:
+cd ~
+git clone https://github.com/Sonesh-2202/Cryogenic-Dram.git
+cd Cryogenic-Dram
+```
+
+#### Step 5: Run Automated Project Setup
+Inside the repository root in the Ubuntu terminal:
+```bash
+# 1. Run the automated setup script (creates .venv, installs packages, builds CACTI)
+bash scripts/setup.sh
+
+# 2. Activate the virtual environment
+source .venv/bin/activate
+
+# 3. Verify all tools and dependencies
+make check
+```
+
+---
+
+### 5.2 Native Ubuntu 22.04 LTS Setup
+If you are already running native Ubuntu 22.04 LTS (or another Debian-based Linux distribution):
+```bash
+# 1. Install system tools and build libraries
 sudo apt-get update && sudo apt-get install -y \
     build-essential g++ make ngspice python3-pip python3-venv \
     libboost-all-dev libprotobuf-dev protobuf-compiler
 
+# 2. Clone and navigate to the repository
 git clone https://github.com/Sonesh-2202/Cryogenic-Dram.git
 cd Cryogenic-Dram
+
+# 3. Run project setup and activate environment
 bash scripts/setup.sh
 source .venv/bin/activate
+make check
 ```
 
 ---
