@@ -1,7 +1,7 @@
 * 3T DRAM cell - non-destructive read (ngspice)
 * NM0 write access (WL), NM1 storage/read device (gate = storage node SN),
 * NM2 read access (RL). BBL is the precharged read bit-line = OUT.
-.include spice/nmos_generic.inc
+.include nmos_generic.inc
 .param VDD=5 W=2u L=0.18u
 
 Vdd vdd 0 {VDD}

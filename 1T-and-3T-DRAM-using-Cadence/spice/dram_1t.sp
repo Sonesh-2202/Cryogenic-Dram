@@ -1,6 +1,6 @@
 * 1T-1C DRAM cell - write then hold/read (ngspice)
 * Access NMOS: gate=WL, drain=BL, source=SD (storage node); Cs from SD to gnd.
-.include spice/nmos_generic.inc
+.include nmos_generic.inc
 .param VDD=5 W=2u L=0.18u CS=1p
 
 M1 BL WL SD 0 nmos w={W} l={L}
