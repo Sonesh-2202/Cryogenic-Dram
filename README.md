@@ -125,9 +125,11 @@ If you are on Windows 11 and do not have WSL 2 or Ubuntu installed yet, follow t
 1. After rebooting, open **Ubuntu 22.04** from the Windows Start menu (or type `wsl -d Ubuntu-22.04` in PowerShell).
 2. Wait a moment for the initial initialization to finish.
 3. When prompted, create a **UNIX username** and **password** (note: characters will not show on screen while typing passwords for security).
-4. Update the package database:
+4. Update the package database and install required system tools & libraries:
    ```bash
-   sudo apt-get update && sudo apt-get upgrade -y
+   sudo apt-get update && sudo apt-get install -y \
+       build-essential g++ make ngspice python3-pip python3-venv \
+       libboost-all-dev libprotobuf-dev protobuf-compiler
    ```
 
 #### Step 4: Access Your Project Files in WSL

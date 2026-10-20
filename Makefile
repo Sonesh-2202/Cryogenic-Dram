@@ -2,8 +2,13 @@
 # CryoDRAM Research Framework Makefile
 # =============================================================================
 
-SHELL := /bin/bash
-PYTHON ?= $(shell which python3 2>/dev/null || echo python3)
+# Auto-detect virtual environment Python if present, otherwise system python3
+VENV_PYTHON := $(wildcard .venv/bin/python3)
+ifeq ($(VENV_PYTHON),)
+    PYTHON ?= $(shell which python3 2>/dev/null || echo python3)
+else
+    PYTHON ?= $(abspath $(VENV_PYTHON))
+endif
 export PYTHONPATH := src:$(PYTHONPATH)
 
 .PHONY: help setup check run-mosfet run-cryo-mem run-spice analyze plot all test clean

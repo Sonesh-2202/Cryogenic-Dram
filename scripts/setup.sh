@@ -14,20 +14,38 @@ echo " CryoDRAM Research Environment Setup"
 echo " Target Root: ${REPO_ROOT}"
 echo "============================================================"
 
-# 1. Check system utilities
+# 1. Check system utilities and libraries
 echo "[*] Checking system dependencies..."
-MISSING_PKGS=()
+NEED_INSTALL=false
 
 for cmd in python3 g++ make ngspice; do
     if ! command -v "$cmd" &> /dev/null; then
-        MISSING_PKGS+=("$cmd")
+        NEED_INSTALL=true
+        break
     fi
 done
 
-if [ ${#MISSING_PKGS[@]} -ne 0 ]; then
-    echo "[!] Warning: The following system tools are missing: ${MISSING_PKGS[*]}"
-    echo "    On Ubuntu/Debian/WSL 2, install them using:"
-    echo "    sudo apt-get update && sudo apt-get install -y build-essential g++ make ngspice python3-pip python3-venv libboost-all-dev libprotobuf-dev protobuf-compiler"
+# Also check for python3-venv and dev libraries if on Debian/Ubuntu
+if command -v dpkg-query &> /dev/null; then
+    for pkg in python3-venv libboost-all-dev libprotobuf-dev; do
+        if ! dpkg-query -W -f='${Status}' "$pkg" 2>/dev/null | grep -q "ok installed"; then
+            NEED_INSTALL=true
+            break
+        fi
+    done
+fi
+
+if [ "$NEED_INSTALL" = true ]; then
+    echo "[!] System dependencies missing. Installing via apt-get (requires sudo)..."
+    if command -v sudo &> /dev/null; then
+        sudo apt-get update && sudo apt-get install -y \
+            build-essential g++ make ngspice python3-pip python3-venv \
+            libboost-all-dev libprotobuf-dev protobuf-compiler
+    else
+        echo "[!] 'sudo' not available. Please install the following packages manually:"
+        echo "    build-essential g++ make ngspice python3-pip python3-venv libboost-all-dev libprotobuf-dev protobuf-compiler"
+        exit 1
+    fi
 fi
 
 # 2. Setup Python virtual environment
