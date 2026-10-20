@@ -1,0 +1,42 @@
+NMOS running at 77K (Target)
+Vdd:		1.200000 [V]
+Vth0:		0.480000 [V]
+Vth_on:		0.242606 [V]
+Vth_off:	0.296909 [V]
+Ion:		3832.680 [uA/um]
+Isub:		0.000000 [uA/um]
+Igate:		0.007435 [uA/um]
+
+NMOS running at 300K (Reference)
+Vdd:		0.900000 [V]
+Vth0:		0.493960 [V]
+Vth_on:		0.319979 [V]
+Vth_off:	0.360301 [V]
+Ion:		1668.144 [uA/um]
+Isub:		0.045316 [uA/um]
+Igate:		0.003035 [uA/um]
+
+PMOS running at 77K (Target)
+Vdd:		1.200000 [V]
+Vth0:		0.462000 [V]
+Vth_on:		0.172208 [V]
+Vth_off:	0.248242 [V]
+Ion:		2822.540 [uA/um]
+Isub:		0.000001 [uA/um]
+Igate:		0.003208 [uA/um]
+
+PMOS running at 300K (Reference)
+Vdd:		0.900000 [V]
+Vth0:		0.491550 [V]
+Vth_on:		0.279274 [V]
+Vth_off:	0.335682 [V]
+Ion:		1233.393 [uA/um]
+Isub:		0.011520 [uA/um]
+Igate:		0.001453 [uA/um]
+
+Bulk wire at 77K (Target)
+Rwire:		0.219196256000 [uOhm*cm]
+
+Bulk wire at 300K (Reference)
+Rwire:		1.772766788000 [uOhm*cm]
+

@@ -1,0 +1,30 @@
+
+No compatibility mode selected!
+
+
+Circuit: * 3t dram cell - non-destructive read (ngspice)
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                          5
+bl                                           0
+wl                                           0
+sn                                 2.79691e-19
+n1                                 2.79691e-19
+bbl                                          5
+rl                                           0
+vrl#branch                                   0
+vbl#branch                                   0
+vwl#branch                                   0
+vdd#branch                           -5.01e-12
+
+
+No. of Data Rows : 1701
+v_store             =  4.099604e+00 at=  6.050000e-07
+ngspice-36 done

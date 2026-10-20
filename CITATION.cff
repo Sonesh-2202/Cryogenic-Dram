@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this work or data, please cite both this repository and the foundational CryoModel research."
+title: "Impacts of Extreme Low Temperatures on Silicon Physics and DIMM Operations by Evaluating Cryogenic DRAM"
+authors:
+  - family-names: "Sonesh"
+    email: "sonesh2202@gmail.com"
+repository-code: "https://github.com/Sonesh-2202/Cryogenic-Dram"
+date-released: 2026-10-20
+version: "1.0.0"
+references:
+  - type: conference-paper
+    title: "Cryogenic computer architecture modeling with memory-side case studies"
+    authors:
+      - family-names: "Lee"
+        given-names: "Gyuhyeon"
+      - family-names: "Min"
+        given-names: "Dongmoon"
+      - family-names: "Byun"
+        given-names: "Ilkwon"
+      - family-names: "Kim"
+        given-names: "Jangwoo"
+    conference:
+      name: "Proceedings of the 46th International Symposium on Computer Architecture (ISCA '19)"
+    year: 2019
+    doi: "10.1145/3307650.3322219"
+  - type: conference-paper
+    title: "CryoCache: A Fast, Large, and Cost-Effective Cache Architecture for Cryogenic Computing"
+    authors:
+      - family-names: "Min"
+        given-names: "Dongmoon"
+      - family-names: "Byun"
+        given-names: "Ilkwon"
+      - family-names: "Lee"
+        given-names: "Gyuhyeon"
+      - family-names: "Na"
+        given-names: "Seonhong"
+      - family-names: "Kim"
+        given-names: "Jangwoo"
+    conference:
+      name: "Proceedings of the 25th International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS '20)"
+    year: 2020
+    doi: "10.1145/3373376.3378513"

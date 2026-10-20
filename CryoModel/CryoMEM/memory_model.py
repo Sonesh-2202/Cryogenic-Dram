@@ -168,12 +168,12 @@ def main():
     args = parse_arguments()
 
     # Code to support 4K
+    base_dir = os.path.dirname(os.path.abspath(__file__))
     pgen_path = None
     if args.temperature >= 77:
-        #pgen_path = args.pgen
-        pgen_path = '../CryoMOSFET/CryoMOSFET_77K/pgen.py'
+        pgen_path = os.path.abspath(os.path.join(base_dir, '..', 'CryoMOSFET', 'CryoMOSFET_77K', 'pgen.py'))
     elif args.temperature == 4:
-        pgen_path = '../CryoMOSFET/CryoMOSFET_4K/pgen.py'
+        pgen_path = os.path.abspath(os.path.join(base_dir, '..', 'CryoMOSFET', 'CryoMOSFET_4K', 'pgen.py'))
     else:
         print ("Current version of CryoMEM does not support {}K.".format (args.temperature))
         exit ()

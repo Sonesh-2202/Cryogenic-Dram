@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from subprocess import check_output
-import os, re, enum
+import os, re, enum, sys
 import pgen_interface_pb2 as pi
 
 @enum.unique
@@ -63,15 +63,14 @@ def run(pgen, mode, temperature, node, vdd, vth):
     pgen_output.user_input.Vdd = vdd
     pgen_output.user_input.Vth0 = vth
 
-    cmd = ('python3', pgen,
+    cmd = (sys.executable, pgen,
         '--mosfet_mode', str(mode.value),
         '--temperature', str(temperature),
         '--node', str(node),
         '--vdd', str(vdd),
         '--vth', str(vth))
     
-    #parse_output(pgen_output.output_parameter, check_output(cmd, text=True, cwd=os.path.dirname(pgen)))
-    parse_output(pgen_output.output_parameter, check_output(cmd, text=True))
+    parse_output(pgen_output.output_parameter, check_output(cmd, text=True, cwd=os.path.dirname(os.path.abspath(pgen))))
 
     return pgen_output
 

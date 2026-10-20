@@ -1,0 +1,92 @@
+Cache size                    : 8
+Block size                    : 64
+Associativity                 : 1
+Read only ports               : 0
+Write only ports              : 0
+Read write ports              : 1
+Single ended read ports       : 0
+Cache banks (UCA)             : 16
+Technology                    : 0.032
+Temperature                   : 300
+Tag size                      : 42
+array type                    : Scratch RAM
+Model as memory               : 1
+Model as 3D memory       	 : 1
+Access mode                   : 2
+Data array cell type          : 4
+Data array peripheral type    : 0
+Tag array cell type           : 0
+Tag array peripheral type     : 0
+Optimization target           : 0
+Design objective (UCA wt)     : 0 0 10 0 10
+Design objective (UCA dev)    : 50 100000 100000 100000 1000000
+Cache model                   : 0
+Nuca bank                     : 0
+Wire inside mat               : 1
+Wire outside mat              : 2
+Interconnect projection       : 1
+Wire signaling               : 1
+Print level                   : 0
+ECC overhead                  : 1
+Page size                     : 8192
+Burst length                  : 8
+Internal prefetch width       : 8
+Force cache config            : 0
+Subarray Driver direction       : 1
+iostate                       : READ
+dram_ecc                      : NO_ECC
+io_type                     : DDR4
+dram_dimm                      : UDIMM
+-------  CACTI (version 7.0.3DD Prerelease of Aug, 2012) 3D DRAM Main Memory  -------
+
+Memory Parameters:
+	Total memory size (Gb): 8
+	Number of banks: 16
+	Technology size (nm): 32
+	Page size (bits): 8192
+	Burst depth: 8
+	Chip IO width: 8
+	Best Ndwl: 8
+	Best Ndbl: 512
+	# rows in subarray: 128
+	# columns in subarray: 1024
+
+More detail Configuration:
+		Ndcm:	1
+		Ndwl:	8
+		Ndbl:	512
+		Nspd:	0.125
+		Ndsam lev1:	1
+		Ndsam lev2:	1
+		bank length:	483.952
+		bank_height:	6305.93
+		mat length:	74.688
+		mat height:	24.1965
+		subarray length:	74.688
+		subarray height:	12.288
+		area per bank:	6.29979e+07
+
+Results:
+Timing Components:
+	   t_RCD (Row to column command delay): 3.51226 ns
+	   t_RAS (Row access strobe latency): 5.72901 ns
+	   t_RC (Row cycle): 7.84487 ns
+	   t_CAS (Column access strobe latency): 7.06046 ns
+	   t_RP (Row precharge latency): 2.11585 ns
+	   t_RRD (Row activation to row activation delay): 1.7208 ns
+Power Components:
+	   Activation energy: 0.514117 nJ
+	   Read energy: 1.83331 nJ
+	   Write energy: 1.83336 nJ
+	   Precharge energy: 0.22199 nJ
+           Standby leakage per bank: 0.444796 mW
+Area Components:
+	   DRAM core area: 135.945 mm2
+	   DRAM area per die: 174.538 mm2
+	   Area efficiency: 34.0176%
+	   DRAM die width: 3.51258 mm
+	   DRAM die height: 49.6894 mm
+	   DRAM area per bank: 62.9979 mm
+=============================================
+
+

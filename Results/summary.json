@@ -1,0 +1,353 @@
+{
+  "metadata": {
+    "project": "Impacts of Extreme Low Temperatures on Silicon Physics and DIMM Operations by Evaluating Cryogenic DRAM",
+    "technology_node_nm": 32,
+    "target_supply_voltage_V": 1.2,
+    "reference_supply_voltage_V": 0.9,
+    "tested_temperatures_K": [
+      77,
+      4
+    ]
+  },
+  "cryomem_results": {
+    "77K": {
+      "t_RCD_ns": 3.53964,
+      "t_RAS_ns": 5.64935,
+      "t_RC_ns": 7.74234,
+      "t_CAS_ns": 6.86159,
+      "t_RP_ns": 2.09299,
+      "t_RRD_ns": 1.66303,
+      "activation_energy_nJ": 0.507796,
+      "read_energy_nJ": 1.80089,
+      "write_energy_nJ": 1.80094,
+      "precharge_energy_nJ": 0.221989,
+      "standby_leakage_per_bank_mW": 2.33572,
+      "dram_core_area_mm2": 134.0,
+      "dram_area_per_die_mm2": 172.593,
+      "area_efficiency_percent": 34.4009
+    },
+    "4K": {
+      "t_RCD_ns": 3.51226,
+      "t_RAS_ns": 5.72901,
+      "t_RC_ns": 7.84487,
+      "t_CAS_ns": 7.06046,
+      "t_RP_ns": 2.11585,
+      "t_RRD_ns": 1.7208,
+      "activation_energy_nJ": 0.514117,
+      "read_energy_nJ": 1.83331,
+      "write_energy_nJ": 1.83336,
+      "precharge_energy_nJ": 0.22199,
+      "standby_leakage_per_bank_mW": 0.444796,
+      "dram_core_area_mm2": 135.945,
+      "dram_area_per_die_mm2": 174.538,
+      "area_efficiency_percent": 34.0176
+    }
+  },
+  "cryo_mosfet_results": {
+    "77K": {
+      "nmos_target": {
+        "temperature_K": 77.0,
+        "Vdd": 1.2,
+        "Vth0": 0.48,
+        "Vth_on": 0.242606,
+        "Vth_off": 0.296909,
+        "Ion": 3832.68,
+        "Isub": 0.0,
+        "Igate": 0.007435
+      },
+      "nmos_ref": {},
+      "pmos_target": {
+        "temperature_K": 77.0,
+        "Vdd": 1.2,
+        "Vth0": 0.462,
+        "Vth_on": 0.172208,
+        "Vth_off": 0.248242,
+        "Ion": 2822.54,
+        "Isub": 1e-06,
+        "Igate": 0.003208
+      },
+      "pmos_ref": {},
+      "wire_target": {
+        "temperature_K": 77.0,
+        "Rwire": 0.219196256
+      },
+      "wire_ref": {},
+      "nmos_reference": {
+        "temperature_K": 300.0,
+        "Vdd": 0.9,
+        "Vth0": 0.49396,
+        "Vth_on": 0.319979,
+        "Vth_off": 0.360301,
+        "Ion": 1668.144,
+        "Isub": 0.045316,
+        "Igate": 0.003035
+      },
+      "pmos_reference": {
+        "temperature_K": 300.0,
+        "Vdd": 0.9,
+        "Vth0": 0.49155,
+        "Vth_on": 0.279274,
+        "Vth_off": 0.335682,
+        "Ion": 1233.393,
+        "Isub": 0.01152,
+        "Igate": 0.001453
+      },
+      "wire_reference": {
+        "temperature_K": 300.0,
+        "Rwire": 1.772766788
+      }
+    },
+    "4K": {
+      "nmos_target": {
+        "temperature_K": 4.0,
+        "Vdd": 1.2,
+        "Vth0": 0.518519,
+        "Vth_on": 0.351513,
+        "Vth_off": 0.38633,
+        "Ion": 3418.772,
+        "Isub": 0.0,
+        "Igate": 0.001661,
+        "V/I": 1.781,
+        "Static": 0.0
+      },
+      "nmos_ref": {},
+      "pmos_target": {
+        "temperature_K": 4.0,
+        "Vdd": 1.2,
+        "Vth0": 0.512037,
+        "Vth_on": 0.312007,
+        "Vth_off": 0.359936,
+        "Ion": 2508.649,
+        "Isub": 0.0,
+        "Igate": 0.0,
+        "V/I": 1.307,
+        "Static": 0.0
+      },
+      "pmos_ref": {},
+      "wire_target": {
+        "temperature_K": 4.0,
+        "Rwire": 0.20360797235
+      },
+      "wire_ref": {},
+      "nmos_reference": {
+        "temperature_K": 300.0,
+        "Vdd": 0.9,
+        "Vth0": 0.49396,
+        "Vth_on": 0.319979,
+        "Vth_off": 0.360301,
+        "Ion": 1668.144,
+        "Isub": 0.045316,
+        "Igate": 0.000265,
+        "V/I": 1.158,
+        "Static": 2.122516
+      },
+      "pmos_reference": {
+        "temperature_K": 300.0,
+        "Vdd": 0.9,
+        "Vth0": 0.49155,
+        "Vth_on": 0.279274,
+        "Vth_off": 0.335682,
+        "Ion": 1233.393,
+        "Isub": 0.01152,
+        "Igate": 0.0,
+        "V/I": 0.857,
+        "Static": 0.539595
+      },
+      "wire_reference": {
+        "temperature_K": 300.0,
+        "Rwire": 1.7673172
+      }
+    }
+  },
+  "spice_simulations": {
+    "1T_1C": {
+      "num_data_points": 1655,
+      "v_store_max_V": 4.0518,
+      "v_store_min_V": 0.0,
+      "threshold_loss_V": 0.9482,
+      "assumptions": {
+        "vdd_V": 5.0,
+        "storage_cap_pF": 1.0,
+        "leakage_current_pA": 1.0
+      },
+      "analytical_charge_pC": 4.0518,
+      "analytical_write_energy_pJ": 25.0,
+      "analytical_retention_ms": 2025.88
+    },
+    "3T": {
+      "num_data_points": 1701,
+      "v_store_max_V": 4.0996,
+      "bitline_swing_V": 4.8202,
+      "read_type": "non-destructive",
+      "assumptions": {
+        "vdd_V": 5.0,
+        "storage_cap_fF": 2.0,
+        "leakage_current_pA": 1.0
+      },
+      "analytical_charge_fC": 8.1992,
+      "analytical_write_energy_fJ": 50.0,
+      "analytical_retention_us": 4099.6
+    }
+  },
+  "comparison_records": [
+    {
+      "Category": "DRAM Timing",
+      "Metric": "Row-to-Column Command Delay (tRCD)",
+      "Unit": "ns",
+      "Value_77K": 3.53964,
+      "Value_4K": 3.51226,
+      "Delta_Percent": -0.77,
+      "Notes": "CACTI 3D DRAM model with cryogenic device parameters"
+    },
+    {
+      "Category": "DRAM Timing",
+      "Metric": "Row Access Strobe Latency (tRAS)",
+      "Unit": "ns",
+      "Value_77K": 5.64935,
+      "Value_4K": 5.72901,
+      "Delta_Percent": 1.41,
+      "Notes": "CACTI 3D DRAM model with cryogenic device parameters"
+    },
+    {
+      "Category": "DRAM Timing",
+      "Metric": "Row Cycle Time (tRC)",
+      "Unit": "ns",
+      "Value_77K": 7.74234,
+      "Value_4K": 7.84487,
+      "Delta_Percent": 1.32,
+      "Notes": "CACTI 3D DRAM model with cryogenic device parameters"
+    },
+    {
+      "Category": "DRAM Timing",
+      "Metric": "Column Access Strobe Latency (tCAS)",
+      "Unit": "ns",
+      "Value_77K": 6.86159,
+      "Value_4K": 7.06046,
+      "Delta_Percent": 2.9,
+      "Notes": "CACTI 3D DRAM model with cryogenic device parameters"
+    },
+    {
+      "Category": "DRAM Timing",
+      "Metric": "Row Precharge Latency (tRP)",
+      "Unit": "ns",
+      "Value_77K": 2.09299,
+      "Value_4K": 2.11585,
+      "Delta_Percent": 1.09,
+      "Notes": "CACTI 3D DRAM model with cryogenic device parameters"
+    },
+    {
+      "Category": "DRAM Timing",
+      "Metric": "Row Activation to Activation Delay (tRRD)",
+      "Unit": "ns",
+      "Value_77K": 1.66303,
+      "Value_4K": 1.7208,
+      "Delta_Percent": 3.47,
+      "Notes": "CACTI 3D DRAM model with cryogenic device parameters"
+    },
+    {
+      "Category": "DRAM Energy & Power",
+      "Metric": "Row Activation Energy",
+      "Unit": "nJ",
+      "Value_77K": 0.507796,
+      "Value_4K": 0.514117,
+      "Delta_Percent": 1.24,
+      "Notes": "Dramatic leakage reduction (~81%) at 4 K"
+    },
+    {
+      "Category": "DRAM Energy & Power",
+      "Metric": "Read Energy",
+      "Unit": "nJ",
+      "Value_77K": 1.80089,
+      "Value_4K": 1.83331,
+      "Delta_Percent": 1.8,
+      "Notes": "Dramatic leakage reduction (~81%) at 4 K"
+    },
+    {
+      "Category": "DRAM Energy & Power",
+      "Metric": "Write Energy",
+      "Unit": "nJ",
+      "Value_77K": 1.80094,
+      "Value_4K": 1.83336,
+      "Delta_Percent": 1.8,
+      "Notes": "Dramatic leakage reduction (~81%) at 4 K"
+    },
+    {
+      "Category": "DRAM Energy & Power",
+      "Metric": "Precharge Energy",
+      "Unit": "nJ",
+      "Value_77K": 0.221989,
+      "Value_4K": 0.22199,
+      "Delta_Percent": 0.0,
+      "Notes": "Dramatic leakage reduction (~81%) at 4 K"
+    },
+    {
+      "Category": "DRAM Energy & Power",
+      "Metric": "Standby Leakage Power per Bank",
+      "Unit": "mW",
+      "Value_77K": 2.33572,
+      "Value_4K": 0.444796,
+      "Delta_Percent": -80.96,
+      "Notes": "Dramatic leakage reduction (~81%) at 4 K"
+    },
+    {
+      "Category": "DRAM Area",
+      "Metric": "DRAM Core Area",
+      "Unit": "mm2",
+      "Value_77K": 134.0,
+      "Value_4K": 135.945,
+      "Delta_Percent": 1.45,
+      "Notes": "Area layout optimized for cryogenic drive currents"
+    },
+    {
+      "Category": "DRAM Area",
+      "Metric": "DRAM Total Area per Die",
+      "Unit": "mm2",
+      "Value_77K": 172.593,
+      "Value_4K": 174.538,
+      "Delta_Percent": 1.13,
+      "Notes": "Area layout optimized for cryogenic drive currents"
+    },
+    {
+      "Category": "DRAM Area",
+      "Metric": "Area Efficiency",
+      "Unit": "%",
+      "Value_77K": 34.4009,
+      "Value_4K": 34.0176,
+      "Delta_Percent": -1.11,
+      "Notes": "Area layout optimized for cryogenic drive currents"
+    },
+    {
+      "Category": "CryoMOSFET Device",
+      "Metric": "NMOS Drive Current (Ion)",
+      "Unit": "uA/um",
+      "Value_77K": 3832.68,
+      "Value_4K": 3418.772,
+      "Delta_Percent": -10.8,
+      "Notes": "Target Vdd = 1.2 V (Note: Reference 300K uses 0.9 V)"
+    },
+    {
+      "Category": "CryoMOSFET Device",
+      "Metric": "PMOS Drive Current (Ion)",
+      "Unit": "uA/um",
+      "Value_77K": 2822.54,
+      "Value_4K": 2508.649,
+      "Delta_Percent": -11.12,
+      "Notes": "Target Vdd = 1.2 V (Note: Reference 300K uses 0.9 V)"
+    },
+    {
+      "Category": "Interconnect",
+      "Metric": "Bulk Wire Resistivity (Rwire)",
+      "Unit": "uOhm*cm",
+      "Value_77K": 0.219196256,
+      "Value_4K": 0.20360797235,
+      "Delta_Percent": -7.11,
+      "Notes": "Copper resistivity reduction with reduced phonon scattering"
+    }
+  ],
+  "scientific_limitations": [
+    "All results are software model outputs, not experimental physical DIMM measurements.",
+    "CryoMEM injects low-temp parameters into CACTI, but CACTI internal temperature handling is 300 K.",
+    "CryoMOSFET target runs use Vdd=1.2V while reference runs use Vdd=0.9V, confounding temperature effects with voltage scaling.",
+    "1T and 3T SPICE simulations use a generic Level-1 MOSFET model at room temperature for operational demonstration."
+  ]
+}

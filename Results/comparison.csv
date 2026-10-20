@@ -1,0 +1,18 @@
+Category,Metric,Unit,Value_77K,Value_4K,Delta_Percent,Notes
+DRAM Timing,Row-to-Column Command Delay (tRCD),ns,3.53964,3.51226,-0.77,CACTI 3D DRAM model with cryogenic device parameters
+DRAM Timing,Row Access Strobe Latency (tRAS),ns,5.64935,5.72901,1.41,CACTI 3D DRAM model with cryogenic device parameters
+DRAM Timing,Row Cycle Time (tRC),ns,7.74234,7.84487,1.32,CACTI 3D DRAM model with cryogenic device parameters
+DRAM Timing,Column Access Strobe Latency (tCAS),ns,6.86159,7.06046,2.9,CACTI 3D DRAM model with cryogenic device parameters
+DRAM Timing,Row Precharge Latency (tRP),ns,2.09299,2.11585,1.09,CACTI 3D DRAM model with cryogenic device parameters
+DRAM Timing,Row Activation to Activation Delay (tRRD),ns,1.66303,1.7208,3.47,CACTI 3D DRAM model with cryogenic device parameters
+DRAM Energy & Power,Row Activation Energy,nJ,0.507796,0.514117,1.24,Dramatic leakage reduction (~81%) at 4 K
+DRAM Energy & Power,Read Energy,nJ,1.80089,1.83331,1.8,Dramatic leakage reduction (~81%) at 4 K
+DRAM Energy & Power,Write Energy,nJ,1.80094,1.83336,1.8,Dramatic leakage reduction (~81%) at 4 K
+DRAM Energy & Power,Precharge Energy,nJ,0.221989,0.22199,0.0,Dramatic leakage reduction (~81%) at 4 K
+DRAM Energy & Power,Standby Leakage Power per Bank,mW,2.33572,0.444796,-80.96,Dramatic leakage reduction (~81%) at 4 K
+DRAM Area,DRAM Core Area,mm2,134.0,135.945,1.45,Area layout optimized for cryogenic drive currents
+DRAM Area,DRAM Total Area per Die,mm2,172.593,174.538,1.13,Area layout optimized for cryogenic drive currents
+DRAM Area,Area Efficiency,%,34.4009,34.0176,-1.11,Area layout optimized for cryogenic drive currents
+CryoMOSFET Device,NMOS Drive Current (Ion),uA/um,3832.68,3418.772,-10.8,Target Vdd = 1.2 V (Note: Reference 300K uses 0.9 V)
+CryoMOSFET Device,PMOS Drive Current (Ion),uA/um,2822.54,2508.649,-11.12,Target Vdd = 1.2 V (Note: Reference 300K uses 0.9 V)
+Interconnect,Bulk Wire Resistivity (Rwire),uOhm*cm,0.219196256,0.20360797235,-7.11,Copper resistivity reduction with reduced phonon scattering

@@ -8,13 +8,25 @@ env/
 __pycache__/
 *.py[cod]
 *$py.class
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Compiled objects and libraries (excluding CACTI distribution binaries needed if non-compiled)
+*.o
+*.so
+*.a
 
 # Lock files and backups
 *.lock
 *.bak
 *.backup
 
-# EDA & Simulation artifacts
+# EDA & Simulation temporary artifacts
 *.raw
 *.vcd
 *.out

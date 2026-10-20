@@ -1,0 +1,54 @@
+NMOS running at 4K (Target)
+Vdd:		1.200000 [V]
+Vth0:		0.518519 [V]
+Vth_on:		0.351513 [V]
+Vth_off:	0.386330 [V]
+Ion:		3418.772 [uA/um]
+Isub:		0.000000 [uA/um]
+Igate:		0.001661 [uA/um]
+
+V/I:		1.781
+Static:		0.000000 [uA/um]
+
+NMOS running at 300K (Reference)
+Vdd:		0.900000 [V]
+Vth0:		0.493960 [V]
+Vth_on:		0.319979 [V]
+Vth_off:	0.360301 [V]
+Ion:		1668.144 [uA/um]
+Isub:		0.045316 [uA/um]
+Igate:		0.000265 [uA/um]
+
+V/I:		1.158
+Static:		2.122516 [uA/um]
+
+PMOS running at 4K (Target)
+Vdd:		1.200000 [V]
+Vth0:		0.512037 [V]
+Vth_on:		0.312007 [V]
+Vth_off:	0.359936 [V]
+Ion:		2508.649 [uA/um]
+Isub:		0.000000 [uA/um]
+Igate:		0.000000 [uA/um]
+
+V/I:		1.307
+Static:		0.000000 [uA/um]
+
+PMOS running at 300K (Reference)
+Vdd:		0.900000 [V]
+Vth0:		0.491550 [V]
+Vth_on:		0.279274 [V]
+Vth_off:	0.335682 [V]
+Ion:		1233.393 [uA/um]
+Isub:		0.011520 [uA/um]
+Igate:		0.000000 [uA/um]
+
+V/I:		0.857
+Static:		0.539595 [uA/um]
+
+Bulk wire at 4K (Target)
+Rwire:		0.203607972350 [uOhm*cm]
+
+Bulk wire at 300K (Reference)
+Rwire:		1.767317200000 [uOhm*cm]
+

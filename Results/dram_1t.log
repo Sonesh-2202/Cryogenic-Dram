@@ -1,0 +1,25 @@
+
+No compatibility mode selected!
+
+
+Circuit: * 1t-1c dram cell - write then hold/read (ngspice)
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+bl                                           0
+wl                                           0
+sd                                 2.79691e-19
+vbl#branch                                   0
+vwl#branch                                   0
+
+
+No. of Data Rows : 1655
+v_store_hi          =  4.051767e+00 at=  7.000000e-07
+v_store_lo          =  2.796907e-19 at=  4.000000e-11
+ngspice-36 done

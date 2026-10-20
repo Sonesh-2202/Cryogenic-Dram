@@ -1,0 +1,22 @@
+# Auto-detect text and normalize line endings
+* text=auto eol=lf
+
+# Force LF on shell scripts and code
+*.sh text eol=lf
+*.py text eol=lf
+*.sp text eol=lf
+*.inc text eol=lf
+*.cfg text eol=lf
+*.v text eol=lf
+*.dat text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+Makefile text eol=lf
+
+# Binary assets
+*.png binary
+*.gds binary
+*.docx binary
+*.db binary
+*.lib binary

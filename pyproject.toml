@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cryodram"
+version = "1.0.0"
+description = "Impacts of Extreme Low Temperatures on Silicon Physics and DIMM Operations by Evaluating Cryogenic DRAM"
+readme = "README.md"
+requires-python = ">=3.8, <3.11"
+authors = [
+    { name = "Sonesh", email = "sonesh2202@gmail.com" }
+]
+dependencies = [
+    "protobuf==3.20.3",
+    "numpy>=1.22.0",
+    "matplotlib>=3.5.0",
+    "pytest>=7.0.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
