@@ -229,6 +229,46 @@ make plot
 make clean
 ```
 
+### 7.1 Interactive SPICE Simulation & Waveform GUI (For Lab Exams & Demos)
+
+If your examiners or professors ask you to **open ngspice and show the live circuit waveforms**:
+
+#### Option A: One-Click GUI Simulation from Windows PowerShell
+Make sure you are in the project folder, then run:
+
+```powershell
+cd E:\CryoDRAM
+
+# 1. Simulate 1T-1C Bitcell and display live waveform window:
+& "C:\Users\sones\Downloads\Spice64\bin\ngspice.exe" "spice\dram_1t_gui.sp"
+
+# 2. Simulate 3T Gain Cell and display live waveform window:
+& "C:\Users\sones\Downloads\Spice64\bin\ngspice.exe" "spice\dram_3t_gui.sp"
+```
+*(The native ngspice graphical window will open and remain persistent on screen with the transient waveform plots).*
+
+#### Option B: Inside the ngspice GUI Prompt
+If you opened `ngspice.exe` directly from the Start menu or File Explorer, type inside the ngspice prompt:
+
+```spice
+cd E:/CryoDRAM
+source spice/dram_1t_gui.sp
+```
+*(To plot manually, you can also type: `plot v(wl) v(bl) v(sd)` for 1T or `plot v(wl) v(rl) v(sn) v(bbl)` for 3T).*
+
+#### Option C: How to Present the Circuit Diagrams in Exams
+* **Tool Used**: The schematics were designed in **Cadence Virtuoso (Spectre)** at 180 nm node ($W=2\,\mu\text{m}, L=180\,\text{nm}$) and exported as portable standard SPICE netlists so they run anywhere without requiring commercial Cadence campus license servers.
+* **Schematic Files to Project**:
+  - **1T-1C DRAM Bitcell**: [1T-and-3T-DRAM-using-Cadence/1T DRAM.png](1T-and-3T-DRAM-using-Cadence/1T%20DRAM.png) (Figure 3.1)
+  - **1T-1C Testbench Circuit**: [1T-and-3T-DRAM-using-Cadence/1T DRAM test circuit.png](1T-and-3T-DRAM-using-Cadence/1T%20DRAM%20test%20circuit.png) (Figure 3.2)
+  - **3T Gain Cell Bitcell**: [1T-and-3T-DRAM-using-Cadence/3T DRAM.png](1T-and-3T-DRAM-using-Cadence/3T%20DRAM.png) (Figure 3.3)
+  - **3T Testbench Circuit**: [1T-and-3T-DRAM-using-Cadence/3T DRAM test circuit.png](1T-and-3T-DRAM-using-Cadence/3T%20DRAM%20test%20circuit.png) (Figure 3.4)
+* **Pre-Rendered Waveform Figures**:
+  - [results/dram_spice_waveforms.png](results/dram_spice_waveforms.png) (Side-by-side 1T vs 3T transient curves)
+  - [1T-and-3T-DRAM-using-Cadence/Write op_1T DRAM.png](1T-and-3T-DRAM-using-Cadence/Write%20op_1T%20DRAM.png) (Cadence Spectre 1T Write trace)
+  - [1T-and-3T-DRAM-using-Cadence/Read op_1T DRAM.png](1T-and-3T-DRAM-using-Cadence/Read%20op_1T%20DRAM.png) (Cadence Spectre 1T Read trace)
+  - [1T-and-3T-DRAM-using-Cadence/Write op_3T DRAM.png](1T-and-3T-DRAM-using-Cadence/Write%20op_3T%20DRAM.png) (Cadence Spectre 3T Write trace)
+
 ---
 
 ## 8. Output Catalogue & Provenance
