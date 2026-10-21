@@ -1,0 +1,27 @@
+Domain,Subcategory,Metric,Unit,Condition / Baseline (300K),Value (77K),Value (4K),Delta (77K -> 4K),Delta vs 300K,Physical / Architectural Meaning & Notes
+DRAM Architecture,Timing Latencies,Row-to-Column Command Delay (tRCD),ns,N/A,3.53964,3.51226,-0.77%,N/A,Faster wordline charging due to reduced copper wire interconnect resistance
+DRAM Architecture,Timing Latencies,Row Access Strobe Latency (tRAS),ns,N/A,5.64935,5.72901,+1.41%,N/A,Slight increase due to CACTI internal sub-mat sizing & buffer optimization
+DRAM Architecture,Timing Latencies,Row Cycle Time (tRC),ns,N/A,7.74234,7.84487,+1.32%,N/A,Total cycle time governed by tRAS + tRP
+DRAM Architecture,Timing Latencies,Column Access Strobe Latency (tCAS),ns,N/A,6.86159,7.06046,+2.90%,N/A,Column decoder and bitline multiplexing traversal delay
+DRAM Architecture,Timing Latencies,Row Precharge Latency (tRP),ns,N/A,2.09299,2.11585,+1.09%,N/A,Bitline precharge equalization and restore time
+DRAM Architecture,Timing Latencies,Row-to-Row Activation Delay (tRRD),ns,N/A,1.66303,1.72080,+3.47%,N/A,Constraint between consecutive bank activations
+DRAM Architecture,Energy & Power,Row Activation Energy,nJ,N/A,0.507796,0.514117,+1.24%,N/A,Dynamic row decoder and wordline charging energy
+DRAM Architecture,Energy & Power,Read Energy,nJ,N/A,1.80089,1.83331,+1.80%,N/A,Sense amplifier and column access dynamic energy
+DRAM Architecture,Energy & Power,Write Energy,nJ,N/A,1.80094,1.83336,+1.80%,N/A,Bitline drive and bitcell write energy
+DRAM Architecture,Energy & Power,Precharge Energy,nJ,N/A,0.221989,0.221990,0.00%,N/A,Equalizing bitlines to VDD/2
+DRAM Architecture,Energy & Power,Standby Leakage Power per Bank,mW,N/A,2.33572,0.444796,-80.96%,N/A,Massive ~81% static leakage reduction due to subthreshold swing steepening
+DRAM Architecture,Area & Layout,DRAM Core Area,mm2,N/A,134.000,135.945,+1.45%,N/A,Silicon area dedicated to memory array mats
+DRAM Architecture,Area & Layout,DRAM Total Area per Die,mm2,N/A,172.593,174.538,+1.13%,N/A,Total die footprint including peripheral circuitry & TSV pads
+DRAM Architecture,Area & Layout,Area Efficiency,%,N/A,34.4009,34.0176,-1.11%,N/A,Ratio of core bitcell storage area to total die area
+DRAM Architecture,Area & Layout,DRAM Die Width,mm,N/A,3.52853,3.51258,-0.45%,N/A,Optimized physical aspect ratio
+DRAM Architecture,Area & Layout,DRAM Die Height,mm,N/A,48.9137,49.6894,+1.59%,N/A,Optimized physical aspect ratio
+DRAM Architecture,Area & Layout,DRAM Area per Bank,mm2,N/A,61.1436,62.9979,+3.03%,N/A,Footprint of each of the 16 banks
+Cryo Physics,MOSFET Device,NMOS Drive Current (Ion),uA/um,1668.14 (at 0.9V),3832.68 (at 1.2V),3418.77 (at 1.2V),-10.80%,+104.9% (vs 300K),Phonon scattering suppression boosts mobility; 1.2V VDD scaling applied
+Cryo Physics,MOSFET Device,PMOS Drive Current (Ion),uA/um,1233.39 (at 0.9V),2822.54 (at 1.2V),2508.65 (at 1.2V),-11.12%,+103.4% (vs 300K),Hole mobility enhancement at cryogenic temperatures
+Cryo Physics,MOSFET Device,NMOS Subthreshold Leakage (Isub),uA/um,0.045316,0.000000,0.000000,~0.00%,-100.0%,Thermal voltage kT/q collapse eliminates subthreshold diffusion current
+Cryo Physics,MOSFET Device,PMOS Subthreshold Leakage (Isub),uA/um,0.011520,0.000001,0.000000,-100.0%,-100.0%,Suppressed off-state leakage near 0 A
+Cryo Physics,MOSFET Device,NMOS Gate Leakage (Igate),uA/um,0.003035,0.007435,0.001661,-77.66%,-45.27%,Direct tunneling dominates at 4 K
+Cryo Physics,MOSFET Device,PMOS Gate Leakage (Igate),uA/um,0.001453,0.003208,0.000000,-100.0%,-100.0%,Near-zero gate tunneling for PMOS at 4 K
+Cryo Physics,MOSFET Device,NMOS Threshold Voltage (Vth0),V,0.49396,0.48000,0.51852,+8.03%,+4.97%,Vth shifts upward at 4 K due to Fermi level shift toward band edge
+Cryo Physics,MOSFET Device,PMOS Threshold Voltage (Vth0),V,0.49155,0.46200,0.51204,+10.83%,+4.17%,Cryogenic threshold voltage increase
+Cryo Physics,Interconnect,Bulk Copper Wire Resistivity (Rwire),uOhm*cm,1.77277,0.21920,0.20361,-7.11%,-88.51%,Electron-phonon collision freeze-out leaves impurity scattering limit

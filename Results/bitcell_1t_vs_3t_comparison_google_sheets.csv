@@ -1,0 +1,15 @@
+Circuit Metric,1T-1C Bitcell,3T Gain Cell,Ratio / Comparison,Physical & Design Notes
+Transistors per Cell,1 (+1 capacitor),3,3x more transistors in 3T,1T offers highest packing density for main memory
+Storage Mechanism,Trench/Stacked Capacitor (Cs),Gate Oxide Capacitance of Read NMOS,Dedicated Cap vs Gate Cap,3T requires no complex high-aspect deep trench capacitor
+Storage Capacitance,1.0 pF (1000 fF),2.0 fF,~500x smaller capacitance in 3T,Small capacitance enables ultra-fast and low-energy writes
+Supply Voltage (VDD),5.0 V,5.0 V,Identical (180 nm PDK node),Standard 180nm CMOS supply in Cadence simulation
+Stored '1' Level (Cadence Measured),4.20 V,4.69 V,+0.49 V higher in 3T,1T loses threshold voltage (VDD - Vth); 3T approaches full rail
+Stored '1' Level (SPICE Level-1),4.0518 V,4.0996 V,+0.048 V higher in 3T,Consistent threshold drop in generic ngspice deck
+Threshold Drop on Write '1',0.80 V to 0.95 V,0.00 V,1T suffers Vth loss,Pass transistor cuts off as source rises to VDD - Vth
+Stored Charge (Q = C*V),4.20 pC,9.40 fC,~450x to 500x larger in 1T,1T holds vast charge pool to drive destructive bitline sharing
+Write Energy (E = C*VDD^2),25.0 pJ,50.0 fJ,500x lower energy in 3T,3T writes require charging only ~2 fF gate capacitance
+Read Mechanism,Destructive (Charge sharing),Non-Destructive (Current sensing),Destructive vs Non-Destructive,1T requires immediate refresh/write-back after every read
+Bitline Read Swing,~15 mV,Full Rail (~4.82 V),>300x larger swing in 3T,1T requires highly sensitive balanced differential sense amplifier
+Sense Amplifier Requirement,Mandatory (High Sensitivity),Not Required (Direct Logic Drive),Architectural simplification in 3T,3T bitline can drive downstream logic directly
+"Analytical Retention (@ 1 pA, 300K)",2025 ms (~2.0 s),4.1 ms (~0.004 s),~500x longer retention in 1T,3T leaks quickly at 300K due to small 2 fF capacitance
+Cryogenic Impact on Retention (4K),Expands to > hours,Expands to > seconds/minutes,"10,000x+ increase",Subthreshold leakage freeze-out eliminates primary refresh overhead
